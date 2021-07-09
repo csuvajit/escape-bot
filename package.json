@@ -1,0 +1,24 @@
+{
+  "name": "escape-interaction",
+  "version": "1.0.0",
+  "description": "escape interaction bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc",
+    "start": "npm run clean && vercel dev",
+    "clean": "rimraf src/**/*.{js,d.ts,map}"
+  },
+  "keywords": [],
+  "author": "SUVAJIT <suvajit.me@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord-api-types": "^0.18.1",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.0",
+    "@vercel/node": "^1.11.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.3"
+  }
+}
