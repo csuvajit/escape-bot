@@ -5,7 +5,7 @@ const DISCORD_EPOCH = 1420070400000;
 
 export default function (req: VercelRequest, res: VercelResponse) {
     if (req.method !== 'POST') {
-        return res.json({ message: 'awww shit!' });
+        return res.status(404).json({ message: 'Method Not Allowed' });
     }
 
     const signature = req.headers['x-signature-ed25519'] as string;
@@ -24,7 +24,7 @@ export default function (req: VercelRequest, res: VercelResponse) {
 
     const now = BigInt(Date.now());
     const bigIntId = BigInt(req.body.id);
-    return res.json({
+    return res.status(200).json({
         type: 4,
         data: {
             content: `**Ping~ ${Number(now - (bigIntId >> 22n) - BigInt(DISCORD_EPOCH))}ms**`

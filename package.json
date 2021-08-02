@@ -1,10 +1,8 @@
 {
-  "name": "escape-interaction",
-  "version": "1.0.0",
-  "description": "escape interaction bot",
-  "main": "index.js",
+  "name": "escape-bot",
+  "version": "1.0.1",
+  "description": "Escape Interaction Commands",
   "scripts": {
-    "test": "tsc",
     "start": "npm run clean && vercel dev",
     "clean": "rimraf src/**/*.{js,d.ts,map}"
   },
